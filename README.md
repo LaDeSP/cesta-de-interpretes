@@ -45,7 +45,8 @@ E acessar o link que apareceu no terminal.
 
 ## Ferramentas utilizadas
 
-* [Laravel 5.5](https://laravel.com) - Framework PHP
+* [PHP](https://secure.php.net/) - Linguagem de programação
+* [Laravel](https://laravel.com) - Framework web PHP
 * [MySQL](https://www.mysql.com/) - Banco de dados
 * [Composer](https://getcomposer.org/) - Gerenciador de dependências PHP
 * [Entrust](https://github.com/Zizaco/entrust/) - Pacote User-Role para Laravel 5 by Zizaco
