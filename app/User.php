@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Zizaco\Entrust\EntrustUserTrait;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
