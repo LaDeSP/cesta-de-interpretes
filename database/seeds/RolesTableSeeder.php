@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Role;
+use Carbon\Carbon;
 
 class RolesTableSeeder extends Seeder
 {
@@ -12,36 +13,30 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        $owner = new Role;
-
-        $owner->name = 'owner';
-        $owner->display_name = 'Owner';
-        $owner->description = 'owner of the website';
-
-        $owner->save();
-
-        $interpreter = new Role;
-
-        $interpreter->name = 'interpreter';
-        $interpreter->display_name = 'Interpreter';
-        $interpreter->description = 'user that answer to requests';
-
-        $interpreter->save();
-
-        $partner = new Role;
-
-        $partner->name = 'partner';
-        $partner->display_name = 'Partner';
-        $partner->description = 'user that create requests';
-
-        $partner->save();
-
-        $super_admin = new Role;
-
-        $super_admin->name = 'super_admin';
-        $super_admin->display_name = 'Super Admin';
-        $super_admin->description = 'user that have all privileges over the website';
-
-        $super_admin->save();
+        DB::table('roles')->insert([[
+            'name' => 'owner',
+            'display_name' => 'Owner',
+            'description' => 'owner of the website',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ],    [
+            'name' => 'interpreter',
+            'display_name' => 'Interpreter',
+            'description' => 'user that answer to the requests',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ],  [
+            'name' => 'partner',
+            'display_name' => 'Partner',
+            'description' => 'user that create requests',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ],  [
+            'name' => 'super_admin',
+            'display_name' => 'Super Admin',
+            'description' => 'user that have all privileges over the website',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]]);
     }
 }
