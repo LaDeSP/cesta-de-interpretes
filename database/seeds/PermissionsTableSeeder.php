@@ -13,7 +13,7 @@ class PermissionsTableSeeder extends Seeder
      public function run()
      {
         /**
-         * Requests oermissions
+         * Requests permissions
          *
          */
         DB::table('permissions')->insert([[
@@ -24,7 +24,7 @@ class PermissionsTableSeeder extends Seeder
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ],  
-            // Admins, Partners 
+            // Partners 
             [
             'name' => 'close-request',
             'display_name' => 'Close request',
@@ -32,7 +32,7 @@ class PermissionsTableSeeder extends Seeder
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ],
-            // Admins, Partners
+            // Partners
             [
             'name' => 'edit-request',
             'display_name' => 'Edit request',
@@ -40,11 +40,19 @@ class PermissionsTableSeeder extends Seeder
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ], 
-            // Interpreter
+            // Interpreters
             [
             'name' => 'answer-request',
             'display_name' => 'Answer request',
             'description' => 'answers to a request',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ], 
+            // Interpreters
+            [
+            'name' => 'see-open-requests',
+            'display_name' => 'See open requests',
+            'description' => 'see open requests',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ], 
